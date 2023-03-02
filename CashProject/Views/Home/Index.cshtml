@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<hr />
+<h3>Categories List</h3>
+<a asp-action="Create" asp-controller="Category" class="btn btn-outline-info">Add a New Category  </a>
+<ul>
+    @foreach (var category in ViewBag.Categories)
+    {
+        <li> @category.CategoryName </li>
+
+    }
+
+</ul>
